@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Samarth Bharat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Samarth Bharat</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#causes">Our Causes</a></li>
+                <li><a href="index.html#volunteer">Volunteer</a></li>
+                <li><a href="index.html#donate">Donate</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Our Events</h1>
+            <p>Join us in making a difference through our impactful events</p>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <div class="container">
+            <div class="events-filter">
+                <div class="filter-group">
+                    <label>Filter by Category:</label>
+                    <select class="category-filter">
+                        <option value="all">All Events</option>
+                        <option value="education">Education</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="fundraising">Fundraising</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select class="sort-filter">
+                        <option value="date-asc">Date: Upcoming First</option>
+                        <option value="date-desc">Date: Later First</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="events-grid">
+                <!-- Event cards from previous code go here -->
+            </div>
+
+            <div class="events-calendar">
+                <div class="calendar-header">
+                    <h2>Event Calendar</h2>
+                    <p>Plan ahead and join our upcoming events</p>
+                </div>
+                <div class="calendar-widget">
+                    <!-- Add your calendar implementation here -->
+                    <div id="calendar"></div>
+                </div>
+            </div>
+
+            <div class="event-registration">
+                <h2>Can't Find What You're Looking For?</h2>
+                <p>Subscribe to our newsletter to stay updated about upcoming events</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Samarth Bharat. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
