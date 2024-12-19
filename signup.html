@@ -1,135 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sign Up</title>
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Roboto', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #f9f9f9, goldenrod);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Application - Samarth Bharat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    h1 {
-      color: goldenrod;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+        }
 
-    a {
-      color: goldenrod;
-      text-decoration: none;
-    }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
 
-    a:hover {
-      color: darkgoldenrod;
-    }
+        /* Header Styles */
+        .volunteer-header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('volunteer.jpg');
+        }
 
-    /* Sign-Up Form Container */
-    .signup-container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 400px;
-    }
+        .volunteer-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
 
-    .signup-container form {
-      display: flex;
-      flex-direction: column;
-    }
+        .volunteer-header p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
 
-    .signup-container label {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+        /* Application Form Styles */
+        .volunteer-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
 
-    .signup-container input {
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 16px;
-    }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
 
-    .signup-container button {
-      background: goldenrod;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
 
-    .signup-container button:hover {
-      background: darkgoldenrod;
-    }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
 
-    .signup-container .login-link {
-      text-align: center;
-      margin-top: 15px;
-    }
-  </style>
+        .form-group textarea {
+            height: 150px;
+        }
+
+        /* Interest Checkboxes */
+        .interest-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .interest-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+
+        .interest-group input[type="checkbox"] {
+            margin-right: 0.5rem;
+            width: auto;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #2ecc71;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .interest-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="signup-container">
-    <h1>Sign Up</h1>
-    <form id="signup-form" action="submit_signup.php" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    <header class="volunteer-header">
+        <div class="container">
+            <h1>Volunteer Application</h1>
+            <p>Join Hope Foundation in making a difference. Your time and skills can transform lives and create meaningful change in communities.</p>
+        </div>
+    </header>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <div class="container">
+        <form class="volunteer-form" id="volunteerApplicationForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter a strong password" required>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-      <label for="confirm-password">Confirm Password</label>
-      <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
 
-      <button type="submit">Sign Up</button>
-    </form>
-    <div class="login-link">
-      Already have an account? <a href="login.html">Log In</a>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="16" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">City/Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+
+            <div class="form-group">
+                <label>Areas of Interest (Select all that apply)</label>
+                <div class="interest-group">
+                    <label><input type="checkbox" name="interests" value="education"> Education</label>
+                    <label><input type="checkbox" name="interests" value="healthcare"> Healthcare</label>
+                    <label><input type="checkbox" name="interests" value="community"> Community Development</label>
+                    <label><input type="checkbox" name="interests" value="environment"> Environmental Projects</label>
+                    <label><input type="checkbox" name="interests" value="childcare"> Child Care</label>
+                    <label><input type="checkbox" name="interests" value="other"> Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="availability">Availability</label>
+                <select id="availability" name="availability" required>
+                    <option value="">Select Availability</option>
+                    <option value="weekdays">Weekdays</option>
+                    <option value="weekends">Weekends</option>
+                    <option value="both">Both Weekdays and Weekends</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="motivation">Why do you want to volunteer? (Optional)</label>
+                <textarea id="motivation" name="motivation" placeholder="Share your motivation and passion for volunteering..."></textarea>
+            </div>
+           
+            <button type="submit" class="submit-btn" > <a href="ngo.html"  style="text-decoration: none; color: #f3eeee;">Submit Application </a></button>
+        </form>
     </div>
-  </div>
- <script>
-    document.getElementById('signup-form').addEventListener('submit', function(event) {
-      event.preventDefault();
 
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value;
-      const confirmPassword = document.getElementById('confirm-password').value;
-
-      if (password !== confi
- rmPassword) {
-        alert('Passwords do not match!');
-        return;
-      }
-
-      if (password.length < 6) {
-        alert('Password must be at least 6 characters long.');
-        return;
-      }
-
-      alert(`Sign-up successful! Welcome, ${name}`);
-
-      // Optional: Submit the form programmatically if all validations pass
-      // this.submit();
-    });
-  </script>
+    <script>
+        document.getElementById('volunteerApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will review it and get back to you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
