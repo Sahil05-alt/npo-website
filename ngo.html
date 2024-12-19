@@ -1,123 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Non-Profit Organization - Samarth Bharat</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .button {
-      background-color: goldenrod;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .button:hover {
-      background-color: darkgoldenrod;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth - Making a Difference</title>
+    <link rel="stylesheet" href="style.css">
+    
+   
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Samarth Bharat</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#causes">Our Causes</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
-<!-- Navigation -->
-<nav>
-  <a href="#mission">Mission</a>
-  <a href="#events">Upcoming Events</a>
-  <a href="#donation">Donation</a>
-  <a href="#volunteer">Volunteer</a>
-</nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Making the World a Better Place</h1>
+            <p>Join us in our mission to create positive change and help those in need</p>
+            <a href="#donate" class="cta-button">Donate Now</a>
+        </div>
+    </section>
 
-<!-- Header -->
-<header>
-  <div>
-    <h1 style="text-align: center; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; background-color: goldenrod;">Samarth Bharat</h1>
-    <p style="color: rgba(0, 6, 6, 0.858); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">A Healthier and Educated India Starts Here.</p>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Samarth Bharat is dedicated to creating lasting change in communities worldwide. Since 1970, we've been working tirelessly to provide education, healthcare, and sustainable solutions to those in need.At Samarth Bharat, our mission is to uplift communities and provide a brighter future for those in need through our efforts in education, healthcare, and sustainable development. We believe that true empowerment comes from access to essential resources, and we are committed to ensuring that no one is left behind in their journey toward a better life.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100K+</h3>
+                            <p>Lives Impacted</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>30+</h3>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- In the #causes section -->
+<section id="causes" class="causes">
+  <div class="container">
+      <h2>Our Causes</h2>
+      <div class="causes-grid">
+          <div class="cause-card">
+              <img src="girl-child-education-pic-1024x683-1.jpg" alt="Education">
+              <h3>Education</h3>
+              <p>Providing quality education to underprivileged children</p>
+              <div class="progress-bar">
+                  <div class="progress" style="width: 75%"></div>
+              </div><a href="donate.html" style="text-decoration: none;">
+              <button class="donate-btn support-btn" >Support Education</button></a>
+          </div>
+          <div class="cause-card">
+              <img src="images15.jpg" alt="Healthcare">
+              <h3>Healthcare</h3>
+              <p>Ensuring medical care reaches remote communities</p>
+              <div class="progress-bar">
+                  <div class="progress" style="width: 60%"></div>
+              </div><a href="donate.html" style="text-decoration: none;">
+              <button class="donate-btn support-btn">Support Healthcare</button></a>
+          </div>
+          <div class="cause-card">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Clean Water">
+              <h3>Clean Water</h3>
+              <p>Providing access to clean and safe drinking water</p>
+              <div class="progress-bar">
+                  <div class="progress" style="width: 85%"></div>
+              </div><a href="donate.html" style="text-decoration: none;">
+              <button class="donate-btn support-btn">Support Clean Water</button></a>
+          </div>
+      </div>
   </div>
-  <img src="08.jpg" alt="Samarth Bharat banner" style="width: 100%; height: auto;">
-</header> 
-<main>
-
-<!-- Mission Section -->
-<!-- Mission and Video Section using HTML table -->
-
-  <table width="100%">
-    <tr>
-      <td width="50%" valign="top">
-        <h2>Our Mission</h2>
-        <p>
-
-          At Samarth Bharat, our mission is to empower underprivileged communities through education and healthcare. We believe that access to quality education is key to breaking the cycle of poverty, which is why we support children with scholarships, school supplies, and skill-building programs to ensure a brighter future for them.
-          
-          In healthcare, we focus on providing essential services to underserved populations, including free health camps, medical supplies, and preventive care. Our goal is to improve the overall well-being of vulnerable communities, ensuring that everyone has access to the care they need to lead healthy, dignified lives..</p>
-      </td>
-      <td width="50%" valign="top" align="center">
-        <h2></h2>
-        <video controls width="80%">
-          <source src="Pratham - Teaching at the Right Level.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </td>
-    </tr>
-  </table>
-
-  <h2 style="font-size: 40px; text-align: center;">About Us</h2>
-  <table width="100%">
-    <tr>
-      <td width="50%" valign="top">
-        <h2>Child Education</h2>
-        <img src="girl-child-education-pic-1024x683-1.jpg" alt="" width="80%">
-        <p>
-
-          </p>
-      </td>
-      <td width="50%" valign="top" align="center">
-        <h2>Healthcare</h2>
-        <img src="images15.jpg" alt="" width="80%">
-         
-        </video>
-      </td>
-    </tr>
-  </table>
-
- 
-
-
-
-
-
-</main>
-
-
-
-<!--Upcoming Events Section -->
-<div>
-  <h2 style="text-align: center; font-size: 36px;" >Upcoming Events</h2>
-  <p style="text-align: center;">Join us at our upcoming events to support our cause. Stay tuned for more details!</p>
-<a href="upcomingevents.html" class="button" style="text-align: center; margin-left: 680px;">Upcoming events</a></div>
-
-
-
-<!-- Donation Section -->
-<section id="donation" class="donation">
-  <h2>Donate Now</h2>
-  <p>Your donations can change lives! Every contribution helps us support more people in need.</p>
-  <a href="donation_page.html" class="button">Donate</a>
 </section>
 
-<!-- Volunteer Section -->
-<section id="volunteer" class="volunteer">
-  <h2>Volunteer With Us</h2>
-  <p>Become a part of our team! Help us organize events, raise awareness, and make a difference in the community.</p>
-  <a href="volunteer_signup.html" class="button">Sign Up to Volunteer</a>
+    <section id="volunteer" class="volunteer">
+      <div class="container">
+          <h2>Join Our Volunteer Community</h2>
+          <div class="volunteer-content">
+              <div class="volunteer-intro">
+                  <p>At Samarth Bharat, we believe in the power of collective action. Our volunteers are the heart of our mission, bringing hope and creating lasting change in communities across the globe.</p>
+              </div>
+              
+              <div class="volunteer-highlights">
+                  <div class="volunteer-grid">
+                      <div class="volunteer-card">
+                          <div class="volunteer-icon">
+                              <i class="fas fa-graduation-cap"></i>
+                          </div>
+                          <h3>Education Empowerment</h3>
+                          <p>Help children unlock their potential through education support and mentorship programs.</p>
+                      </div>
+                      <div class="volunteer-card">
+                          <div class="volunteer-icon">
+                              <i class="fas fa-hands-helping"></i>
+                          </div>
+                          <h3>Community Development</h3>
+                          <p>Engage in grassroots initiatives that strengthen local communities and create sustainable solutions.</p>
+                      </div>
+                      <div class="volunteer-card">
+                          <div class="volunteer-icon">
+                              <i class="fas fa-heartbeat"></i>
+                          </div>
+                          <h3>Healthcare Support</h3>
+                          <p>Assist in medical camps, health awareness programs, and providing critical healthcare access.</p>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="volunteer-cta">
+                  <a href="signup.html" class="cta-button">Become a Volunteer</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    
+  
+
+  <section id="donate" class="donate-preview">
+    <div class="container">
+        <h2>Support Our Causes</h2>
+        <div class="donate-content">
+            <div class="donate-intro">
+                <p>Every donation, big or small, has the power to create meaningful change. Your support helps us continue our mission of transforming lives and building stronger communities.</p>
+            </div>
+
+            <div class="donation-causes">
+                <div class="cause-cards">
+                    <div class="cause-card">
+                        <div class="cause-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Education Fund</h3>
+                        <p>Help provide quality education to underprivileged children</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                        <div class="cause-stats">
+                            <span>Raised: ₹75,000</span>
+                            <span>Goal: ₹100,000</span>
+                        </div>
+                    </div>
+                    <div class="cause-card">
+                        <div class="cause-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Healthcare Initiative</h3>
+                        <p>Provide medical support to remote and underserved communities</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"> <a href="donate.html" class="cta-button"></a></div>
+                        </div>
+                        <div class="cause-stats">
+                            <span>Raised: ₹60,000</span>
+                            <span>Goal: ₹100,000</span>
+                        </div>
+                    </div>
+                    <div class="cause-card">
+                        <div class="cause-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Clean Water Project</h3>
+                        <p>Ensure access to clean and safe drinking water</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                        <div class="cause-stats">
+                            <span>Raised: ₹90,000</span>
+                            <span>Goal: ₹100,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donate-cta">
+                <a href="donate.html" class="cta-button">Donate Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Add this section before the contact section in index.html -->
+<section id="events-preview" class="events-preview">
+    <div class="container">
+        <h2>Our Events</h2>
+        <div class="events-preview-content">
+            <div class="events-intro">
+                <p>Join us in making a difference through our various community events and initiatives. From educational workshops to healthcare camps, we organize events that create lasting impact.</p>
+                <div class="event-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <h4>20+</h4>
+                        <p>Annual Events</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-users"></i>
+                        <h4>5000+</h4>
+                        <p>Participants</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>15+</h4>
+                        <p>Cities</p>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-event">
+                <h3>Featured Event</h3>
+                <div class="event-preview-card">
+                    <img src="National-Workshop-1024x670-2.jpg" alt="Education Workshop" width="400px">
+                    <div class="event-preview-details">
+                        <h4>Annual Fundraising Gala</h4>
+                        <p><i class="fas fa-calendar"></i> December 31, 2024</p>
+                        <p><i class="fas fa-clock"></i> 7:00 PM - 11:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bangalore Grand Hotel</p>
+                    </div>
+                </div>
+            </div>
+            <div class="events-cta">
+                <a href="event.html" class="cta-button">View All Events <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section id="contact" class="contact">
+  <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-content">
+          <div class="contact-info">
+              <div class="info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p>123 Street CP, Delhi-NcR, INDIA</p>
+              </div>
+              <div class="info-item">
+                  <i class="fas fa-phone"></i>
+                  <p>+91 234 567 890</p>
+              </div>
+              <div class="info-item">
+                  <i class="fas fa-envelope"></i>
+                  <p>info@samarthbharat.org</p>
+              </div>
+          </div>
+          <div class="social-links">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+              <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+              <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </div>
+  </div>
+</section>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2024 Non-Profit Organization. All rights reserved.</p>
-</footer>
-
+    <footer>
+        <div class="container">
+            <p>&copy; Bharat. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js.js"></script>
+    <script src="donate.js"></script>
 </body>
 </html>
