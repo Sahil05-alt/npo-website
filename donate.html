@@ -5,189 +5,250 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Our Mission</title>
     <style>
-        @keyframes gradientBG {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
-        }
+        
+        
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
 
-        @keyframes floatUp {
-            0% {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+@keyframes floatUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #fffde7, #fff9c4, #ffff8d);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-            line-height: 1.6;
-            color: #333;
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #fffde7, #fff9c4, #ffff8d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+}
 
-        .donate-container {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            box-shadow: 
-                0 10px 25px rgba(0,0,0,0.1),
-                0 0 20px rgba(255, 235, 59, 0.2);
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-            animation: floatUp 0.8s ease-out;
-            position: relative;
-            overflow: hidden;
-        }
+.donate-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 
+        0 10px 25px rgba(0,0,0,0.1),
+        0 0 20px rgba(255, 235, 59, 0.2);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: floatUp 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+}
 
-        .donate-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: 
-                radial-gradient(circle at center, rgba(255, 235, 59, 0.1) 0%, transparent 70%);
-            animation: pulse 5s infinite alternate;
-            z-index: -1;
-        }
+.donate-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at center, rgba(255, 235, 59, 0.1) 0%, transparent 70%);
+    animation: pulse 5s infinite alternate;
+    z-index: -1;
+}
 
-        h1 {
-            background: linear-gradient(45deg, #c8760b, #b18606);
-            background-clip: border-box;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: floatUp 0.8s ease-out;
-        }
+h1 {
+    background: linear-gradient(45deg, #c8760b, #b18606);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: floatUp 0.8s ease-out;
+}
 
-        .description {
-            background-color: rgba(255, 235, 59, 0.2);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            animation: floatUp 1s ease-out;
-        }
+.description {
+    background-color: rgba(255, 235, 59, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: floatUp 1s ease-out;
+}
 
-        .btn-donate {
-            --clr-font-main: hsla(0 0% 20% / 100);
-            --btn-bg-1: hsla(194 100% 69% / 1);
-            --btn-bg-2: hsla(217 100% 56% / 1);
-            --btn-bg-color: hsla(360 100% 100% / 1);
-            --radii: 0.5em;
-            cursor: pointer;
-            padding: 0.9em 1.4em;
-            min-width: 120px;
-            min-height: 44px;
-            font-size: var(--size, 1rem);
-            font-weight: 500;
-            transition: 0.8s;
-            background-size: 280% auto;
-            background-image: linear-gradient(
-                325deg,
-                var(--btn-bg-2) 0%,
-                var(--btn-bg-1) 55%,
-                var(--btn-bg-2) 90%
-            );
-            border: none;
-            border-radius: var(--radii);
-            color: var(--btn-bg-color);
-            box-shadow:
-                0px 0px 20px rgba(71, 184, 255, 0.5),
-                0px 5px 5px -1px rgba(58, 125, 233, 0.25),
-                inset 4px 4px 8px rgba(175, 230, 255, 0.5),
-                inset -4px -4px 8px rgba(19, 95, 216, 0.35);
-            margin-top: 20px;
-            position: relative;
-            overflow: hidden;
-        }
+.btn-donate {
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: hsla(194 100% 69% / 1);
+    --btn-bg-2: hsla(217 100% 56% / 1);
+    --btn-bg-color: hsla(360 100% 100% / 1);
+    --radii: 0.5em;
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: var(--size, 1rem);
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(
+        325deg,
+        var(--btn-bg-2) 0%,
+        var(--btn-bg-1) 55%,
+        var(--btn-bg-2) 90%
+    );
+    border: none;
+    border-radius: var(--radii);
+    color: var(--btn-bg-color);
+    box-shadow:
+        0px 0px 20px rgba(71, 184, 255, 0.5),
+        0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+        inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+        inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
 
-        .btn-donate::after {
-            content: '';
-            position: absolute;
+.btn-donate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg, 
+        transparent, 
+        rgba(255,255,255,0.3), 
+        transparent
+    );
+    transition: all 0.6s;
+}
+
+.btn-donate:hover::after {
+    left: 100%;
+}
+
+.btn-donate:hover {
+    background-position: right top;
+    transform: scale(1.05);
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow:
+        0 0 0 3px var(--btn-bg-color),
+        0 0 0 6px var(--btn-bg-2);
+}
+
+.donation-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255, 235, 59, 0.5);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.donation-input:focus {
+    border-color: #ffeb3b;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.3);
+}
+
+.secure-text {
+    background-color: rgba(255, 235, 59, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #666;
+    animation: floatUp 1.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-donate, body, .donate-container {
+        animation: none;
+        transition: none;
+    }
+}
+
+        /* Add styles for the modal */
+        .modal {
+            display: none;
+            position: fixed;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                120deg, 
-                transparent, 
-                rgba(255,255,255,0.3), 
-                transparent
-            );
-            transition: all 0.6s;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
         }
 
-        .btn-donate:hover::after {
-            left: 100%;
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            animation: floatUp 0.5s ease-out;
         }
 
-        .btn-donate:hover {
-            background-position: right top;
-            transform: scale(1.05);
-        }
-
-        .btn-donate:is(:focus, :focus-visible, :active) {
-            outline: none;
-            box-shadow:
-                0 0 0 3px var(--btn-bg-color),
-                0 0 0 6px var(--btn-bg-2);
-        }
-
-        .donation-input {
-            width: 100%;
-            padding: 10px;
+        .thank-you-message {
+            color: #2196F3;
+            font-size: 1.5rem;
             margin-bottom: 20px;
-            border: 2px solid rgba(255, 235, 59, 0.5);
-            border-radius: 4px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
         }
 
-        .donation-input:focus {
-            border-color: #ffeb3b;
-            box-shadow: 0 0 10px rgba(255, 235, 59, 0.3);
+        .modal-close {
+            background: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
-        .secure-text {
-            background-color: rgba(255, 235, 59, 0.1);
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            color: #666;
-            animation: floatUp 1.2s ease-out;
+        .modal-close:hover {
+            background: #f44336;
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            .btn-donate, body, .donate-container {
-                animation: none;
-                transition: none;
-            }
+        /* Success icon animation */
+        .success-icon {
+            font-size: 50px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            animation: bounce 1s;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
         }
     </style>
 </head>
@@ -199,7 +260,7 @@
             <p>Your contribution helps us make a difference. Every donation counts!</p>
         </div>
         
-        <form>
+        <form id="donateForm" onsubmit="showThankYou(event)">
             <input 
                 type="number" 
                 min="1" 
@@ -218,5 +279,43 @@
             All donations are tax-deductible and secure.
         </p>
     </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2 class="thank-you-message">Thank You for Supporting Our Cause!</h2>
+            <p>Your generosity makes a real difference in helping us achieve our mission.</p>
+            <button onclick="closeModal()" class="modal-close">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showThankYou(event) {
+            event.preventDefault();
+            const amount = document.querySelector('.donation-input').value;
+            if (amount) {
+                const modal = document.getElementById('thankYouModal');
+                modal.style.display = 'flex';
+                
+                // Optional: Reset form
+                document.getElementById('donateForm').reset();
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('thankYouModal');
+            modal.style.display = 'none';
+            window.location.href = 'ngo.html'; // Redirect to main page after closing
+        }
+
+        // Close modal if clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('thankYouModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
